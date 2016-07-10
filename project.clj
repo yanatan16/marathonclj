@@ -1,4 +1,4 @@
-(defproject org.clojars.yanatan16/marathonclj "0.1.2"
+(defproject org.clojars.yanatan16/marathonclj "0.1.3-SNAPSHOT"
   :description "Marathon Rest Client for Clojure "
   :url "https://github.com/codemomentum/marathonclj"
   :dependencies [[org.clojure/clojure "1.7.0"]
@@ -11,7 +11,7 @@
         :url "https://github.com/codemomentum/marathonclj"}
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :signing {:gpg-key "218C6198"}
+  :signing {:gpg-key "18421CE0"}
   ;; This directive (and the {:creds :gpg} section) tells
   ;; Leiningen how to find your Clojars account credentials.
   ;; You set those up already, right?
