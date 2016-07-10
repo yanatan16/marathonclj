@@ -1,7 +1,7 @@
 (ns marathonclj.rest.usage
   (:refer-clojure :exclude [update])
   (:require [marathonclj.rest.apps :as apps]
-            [clojure.data.json :as json]
+            [cheshire.core :as json]
             [marathonclj.rest.info :as info]
             [marathonclj.rest.deployments :as deployments]
             [marathonclj.rest.queue :as queue]
@@ -13,7 +13,7 @@
 (comment
 
   (def docker-container
-    (json/read-str (slurp "resources/docker_example2.json") :key-fn keyword))
+    (json/parse-string (slurp "resources/docker_example2.json") true))
 
   (c/init! (Connection. "http://10.141.141.10:8080" {}))
 

@@ -1,13 +1,13 @@
 (ns marathonclj.rest.apps-test
   (:require [clojure.test :refer :all]
             [marathonclj.rest.apps :as apps]
-            [clojure.data.json :as json]
+            [cheshire.core :as json]
             [marathonclj.env :as e]
             [marathonclj.common :as c])
   (:import marathonclj.common.Connection)
   )
 
-(def app-descriptor (json/read-str (slurp "resources/app-descriptor1.json") :key-fn keyword))
+(def app-descriptor (json/parse-string (slurp "resources/app-descriptor1.json") true))
 (def version (atom nil))
 (c/init! (Connection. (:marathon-url e/props) {}))
 
@@ -55,5 +55,3 @@
     (is (contains? (apps/delete-app "http1") :deploymentId))
     )
   )
-
-

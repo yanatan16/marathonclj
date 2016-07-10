@@ -1,10 +1,9 @@
-(defproject marathonclj "0.1.2-SNAPSHOT"
+(defproject org.clojars.yanatan16/marathonclj "0.1.2-SNAPSHOT"
   :description "Marathon Rest Client for Clojure "
   :url "https://github.com/codemomentum/marathonclj"
   :dependencies [[org.clojure/clojure "1.7.0"]
-                 [cheshire "5.3.1"]
-                 [org.clojure/data.json "0.2.5"]
-                 [clj-http "0.9.1" :exclusions [org.clojure/clojure]]
+                 [cheshire "5.6.1"]
+                 [clj-http "3.1.0" :exclusions [org.clojure/clojure]]
                  ]
   :min-lein-version "2.4.3"
   ;release

@@ -1,7 +1,6 @@
 (ns marathonclj.rest.events-test
   (:require [clojure.test :refer :all]
             [marathonclj.rest.apps :as apps]
-            [clojure.data.json :as json]
             [marathonclj.env :as env]
             [marathonclj.common :as c]
             [marathonclj.rest.events :as e])
@@ -18,5 +17,3 @@
            ;(e/get-event-stream)
            )))
   )
-
-
